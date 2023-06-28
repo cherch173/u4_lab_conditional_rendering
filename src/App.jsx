@@ -17,8 +17,9 @@ const App = () => {
     // Already does what you need it to, just have to hook it up to your buttons with an onClick
     // If you decide to make a function for going BACK (bonus), maybe make it do the opposite of this?
   }
-  const backButton = () => {
-    setCurrentPage((prevState) => prevState - 1)
+
+  const reducePage = () => {
+    setCurrentPage((prevState) => prevState -1)
   }
 
   return (
@@ -29,10 +30,9 @@ const App = () => {
         age={formValues.age}
         email={formValues.email}
         incrementPage={incrementPage}
-        backButton={backButton}
+        reducePage={reducePage}
         handleChange={handleChange}
       />
-      {/* <Landing incrementPage={incrementPage} /> */}
     </div>
   )
 }
